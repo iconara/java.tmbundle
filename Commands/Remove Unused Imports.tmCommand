@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby -wKU
+
+require ENV['TM_BUNDLE_SUPPORT'] + '/lib/remove_unused_imports'
+
+remove_unused_imports(STDIN.read.strip)
+</string>
+	<key>input</key>
+	<string>document</string>
+	<key>name</key>
+	<string>Remove Unused Imports</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.java</string>
+	<key>uuid</key>
+	<string>4319D8CD-B73B-41EF-BF3C-426A1CCE669B</string>
+</dict>
+</plist>
